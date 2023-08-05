@@ -4,7 +4,7 @@ Genome assembly workflow for metagenomic PacBio CLRs
 This repository provides a comprehensive guide to performing a genome assembly using metagnomic PacBio CLRs.
 It contains a Jupyter notebook with step-by-step instructions for each assembly step, along with [BUSCO](https://busco.ezlab.org/)
 (Benchmarking Universal Single-Copy Orthologs) and [QUAST](http://bioinf.spbau.ru/quast) (Quality Assessment Tool for Genome Assemblies)
-results for each step of the assembly process. The steps include the initial assembly, purging, scaffolding, and filtering steps. 
+results for each step of the assembly process. The steps include the initial assembly, purging, scaffolding, filtering, and quality control steps. 
 
 The repository aims to provide a transparent and reproducible method for genome assembly.
 
