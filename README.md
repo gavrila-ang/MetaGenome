@@ -30,7 +30,7 @@ The repository aims to provide a transparent and reproducible method for genome 
     cd MetaGenome
     ```
 
-5. Install the necessary Python packages list in requirements.txt:
+5. Install the necessary tools in requirements.txt:
 
     ```
     chmod +x requirements.sh
