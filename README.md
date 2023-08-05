@@ -1,22 +1,22 @@
 # MetaGenome
 Genome assembly workflow for metagenomic PacBio CLRs
 
-This repository provides a comprehensive guide to performing a genome assembly using metagnomic PacBio CLRs.
-It contains a Jupyter notebook with step-by-step instructions for each assembly step, along with [BUSCO](https://busco.ezlab.org/)
-(Benchmarking Universal Single-Copy Orthologs) and [QUAST](http://bioinf.spbau.ru/quast) (Quality Assessment Tool for Genome Assemblies)
-results for each step of the assembly process. The steps include the initial assembly, purging, scaffolding, filtering, and quality control steps. 
+This repository provides a comprehensive guide to performing a genome assembly using metagnomic PacBio continuous long reads (CLRs).
+It contains a Jupyter notebook with step-by-step assembly instructions, using the *Hipppodamia convergens* genome as an example. 
+It also contains BUSCO (https://busco.ezlab.org/) (Benchmarking Universal Single-Copy Orthologs) and QUAST (http://bioinf.spbau.ru/quast) (Quality Assessment Tool for Genome Assemblies)
+results for the *Hippodamia convergens* assembly process. The workflow can be modified to be used on your own genomic reads, to assemble your desired genome.
 
 The repository aims to provide a transparent and reproducible method for genome assembly.
 
 ## Prerequisites
 - Python
 - Jupyter Notebook
-- Conda
-- Required libraries installed (listed in requirements.sh file)
+- Conda (for easy BUSCO installation)
+- Assembly and polishing tools installed (listed in requirements.txt file)
 
 ## Download
-1. Download the genomic data by emailing Arun Sethuraman: asethuraman@sdsu.edu
-   The workflow can be modified to be used on your own genomic reads.
+1. Download the *Hippodamia convergens* genomic data by emailing Arun Sethuraman: asethuraman@sdsu.edu
+   OR Download your own genomic reads.
    
 3. Download the assembly_workflow.ipynb
 
@@ -49,9 +49,9 @@ The repository aims to provide a transparent and reproducible method for genome 
 
 - `assembly_workflow.ipynb` - Jupyter Notebook with step-by-step instructions for genome assembly.
 
-- `/busco_results/` - Directory containing BUSCO results for each step of the assembly process.
+- `/busco_results/` - Directory containing BUSCO results for each step of the *Hippodamia convergens* assembly process.
 
-- `/quast_results/` - Directory containing QUAST results for each step of the assembly process.
+- `/quast_results/` - Directory containing QUAST results for each step of the *Hippodamia convergens* assembly process.
 
 ## Results Interpretation
 
