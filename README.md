@@ -3,7 +3,7 @@ Genome assembly workflow for metagenomic PacBio CLRs
 
 This repository provides a comprehensive guide to performing a genome assembly using metagnomic PacBio continuous long reads (CLRs).
 It contains a Jupyter notebook with step-by-step assembly instructions, using the *Hipppodamia convergens* genome as an example. 
-It also contains BUSCO (https://busco.ezlab.org/) (Benchmarking Universal Single-Copy Orthologs) and QUAST (http://bioinf.spbau.ru/quast) (Quality Assessment Tool for Genome Assemblies)
+It also contains BUSCO (Benchmarking Universal Single-Copy Orthologs) [https://busco.ezlab.org/] and QUAST (Quality Assessment Tool for Genome Assemblies) [http://bioinf.spbau.ru/quast]
 results for the *Hippodamia convergens* assembly process. The workflow can be modified to be used on your own genomic reads, to assemble your desired genome.
 
 The repository aims to provide a transparent and reproducible method for genome assembly.
