@@ -73,4 +73,4 @@ QUAST results provide several metrics including N50, L50, total length, etc. for
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE.md file for details
+This project is licensed under the MIT License - see the LICENSE file for details
