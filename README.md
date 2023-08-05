@@ -30,12 +30,7 @@ The repository aims to provide a transparent and reproducible method for genome 
     cd MetaGenome
     ```
 
-5. Install the necessary tools in requirements.txt:
-
-    ```
-    chmod +x requirements.sh
-    ./requirements.sh
-    ```
+5. Install the necessary tools listed in requirements.txt:
 
 ## Usage
 
