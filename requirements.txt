@@ -1,0 +1,27 @@
+# Create a tools folder and store the tools below in this folder.
+
+# Download canu
+https://github.com/marbl/canu
+
+# Download purge_dups
+https://github.com/dfguan/purge_dups
+
+# Download minimap2
+https://github.com/lh3/minimap2
+
+# Download filtlong
+https://github.com/rrwick/Filtlong
+
+# Download ragtag
+https://github.com/malonge/RagTag
+
+# Download wtdbg2
+https://github.com/ruanjue/wtdbg2
+
+# Download Flye
+https://github.com/fenderglass/Flye
+
+# Download samtools
+https://github.com/samtools/samtools
+
+
