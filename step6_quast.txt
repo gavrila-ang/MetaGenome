@@ -1,0 +1,26 @@
+########## Step 6 QUAST output ##########
+
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                    ragtag.scaffold  ragtag.scaffold_broken
+# contigs (>= 0 bp)         899              -                     
+# contigs (>= 1000 bp)      899              2174                  
+# contigs (>= 5000 bp)      647              1915                  
+# contigs (>= 10000 bp)     554              1816                  
+# contigs (>= 25000 bp)     479              1722                  
+# contigs (>= 50000 bp)     422              1625                  
+Total length (>= 0 bp)      619934896        -                     
+Total length (>= 1000 bp)   619934896        619807396             
+Total length (>= 5000 bp)   619267920        619117073             
+Total length (>= 10000 bp)  618589470        618392922             
+Total length (>= 25000 bp)  617484137        616959734             
+Total length (>= 50000 bp)  615333261        613261495             
+# contigs                   899              2174                  
+Largest contig              142209776        6583271               
+Total length                619934896        619807396             
+GC (%)                      35.14            35.14                 
+N50                         89672818         622398                
+N75                         43296686         293416                
+L50                         3                241                   
+L75                         6                606                   
+# N's per 100 kbp           20.57            0.00                  

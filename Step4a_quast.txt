@@ -1,0 +1,26 @@
+########## Step 4a QUAST output ##########
+
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                    hcon.contigs
+# contigs (>= 0 bp)         8520        
+# contigs (>= 1000 bp)      8520        
+# contigs (>= 5000 bp)      8128        
+# contigs (>= 10000 bp)     7962        
+# contigs (>= 25000 bp)     7799        
+# contigs (>= 50000 bp)     7447        
+Total length (>= 0 bp)      1417897883  
+Total length (>= 1000 bp)   1417897883  
+Total length (>= 5000 bp)   1416826942  
+Total length (>= 10000 bp)  1415629218  
+Total length (>= 25000 bp)  1413040253  
+Total length (>= 50000 bp)  1398606890  
+# contigs                   8520        
+Largest contig              6583271     
+Total length                1417897883  
+GC (%)                      35.21       
+N50                         241774      
+N75                         120669      
+L50                         1271        
+L75                         3389        
+# N's per 100 kbp           0.00        

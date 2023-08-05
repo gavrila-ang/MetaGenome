@@ -1,0 +1,26 @@
+########## Step 7 QUAST output ##########
+
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                    50k_asm    50k_asm_broken
+# contigs (>= 0 bp)         422        -             
+# contigs (>= 1000 bp)      422        1697          
+# contigs (>= 5000 bp)      422        1690          
+# contigs (>= 10000 bp)     422        1684          
+# contigs (>= 25000 bp)     422        1665          
+# contigs (>= 50000 bp)     422        1625          
+Total length (>= 0 bp)      615333261  -             
+Total length (>= 1000 bp)   615333261  615205761     
+Total length (>= 5000 bp)   615333261  615182414     
+Total length (>= 10000 bp)  615333261  615136713     
+Total length (>= 25000 bp)  615333261  614808858     
+Total length (>= 50000 bp)  615333261  613261495     
+# contigs                   422        1697          
+Largest contig              142209776  6583271       
+Total length                615333261  615205761     
+GC (%)                      35.16      35.16         
+N50                         89672818   624059        
+N75                         43296686   298973        
+L50                         3          238           
+L75                         6          594           
+# N's per 100 kbp           20.72      0.00          
