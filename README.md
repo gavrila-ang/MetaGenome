@@ -48,9 +48,9 @@ The project contains the following key files:
 - `user_prompt.sh`: This script obtains the necessary parameters for the `assembly_workflow.sh` through user input and generates an executable parameters script.
 - `requirements.txt`: This file lists the necessary tools and the websites where they can be downloaded.
 
-## Results Interpretation (QUAST and BUSCO)
+## Genome Assembly Quality 
 
-Results of the assembly process can be interpreted using the 3C criterion:
+The quality assessment of the genome was based on the 3C criterion:
 
 1. **Contiguity** - QUAST generates the N50 metric, which measures the length such that 50% of the total sequence length is contained in contigs or scaffolds of this length or longer. Higher N50 values generally indicate better contiguity. A contig N50 value of 1Mb is ideal for third generation sequencing. 
 
