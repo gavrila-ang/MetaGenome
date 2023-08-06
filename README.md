@@ -48,6 +48,22 @@ The project contains the following key files:
 - `user_prompt.sh`: This script obtains the necessary parameters for the `assembly_workflow.sh` through user input and generates an executable parameters script.
 - `requirements.txt`: This file lists the necessary tools and the websites where they can be downloaded.
 
+## Overview of `assembly_workflow.sh`
+
+`assembly_workflow.sh` is the core script that automates the entire genome assembly process. Here's an overview of the key steps involved:
+
+1. **Canu**: The initial assembly of metagenomic data takes place in this phase. Canu is a powerful tool specifically designed for long-read sequencing data, in this case, PacBio CLRs (Continuous Long Reads). It corrects and trims the raw reads before actual assembly, thereby improving the quality of the final assembly.
+
+2. **Purge_dups**: After the initial assembly, the purge_dups tool is used. It's designed to identify and remove haplotypic duplication in the assembly, which are common in heterozygous genomes. This enhances the quality of the haploid assembly.
+
+3. **RagTag Scaffolding**: Following the purge_dups step, the assembly is scaffolded using RagTag. This software orders and orients the assembled contigs using the provided reference genome of a closely related species. Note that RagTag does not modify the input sequences.
+
+4. **Filtlong Filtering**: Post-scaffolding, additional filtering is performed using Filtlong, a tool designed to filter long reads by quality. It removes any remaining artifacts or errors, resulting in a cleaner and more accurate final assembly.
+
+5. **Quality Assessment**: The final step is to assess the assembly quality using QUAST and BUSCO. For more information, see Genome Assembly Quality section.
+
+By automating these steps, `assembly_workflow.sh` simplifies the complex task of de novo genome assembly into a single executable script.
+
 ## Genome Assembly Quality 
 
 The quality assessment of the genome was based on the 3C criterion:
