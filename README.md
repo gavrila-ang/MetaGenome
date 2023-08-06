@@ -1,71 +1,75 @@
 # MetaGenome
-Genome assembly workflow for metagenomic PacBio CLRs
 
-This repository provides a comprehensive guide to performing a genome assembly using metagnomic PacBio continuous long reads (CLRs).
-It contains a Jupyter notebook with step-by-step assembly instructions, using the *Hipppodamia convergens* genome as an example. 
-It also contains BUSCO (Benchmarking Universal Single-Copy Orthologs) [https://busco.ezlab.org/] and QUAST (Quality Assessment Tool for Genome Assemblies) [http://bioinf.spbau.ru/quast]
-results for the *Hippodamia convergens* assembly process. The workflow can be modified to be used on your own genomic reads, to assemble your desired genome.
-
-The repository aims to provide a transparent and reproducible method for genome assembly.
+MetaGenome is a de novo genome assembly workflow that automates the assembly of metagenomic data into an unphased haploid genome. It simplifies the execution and customization of the assembly workflow, providing a user-friendly approach to complex computational tasks. The workflow is designed to address the high-memory requirements of genome assembly, allowing the `assembly_workflow.sh` and a parameter script generated from user input to be submitted to a High-Performance Computing (HPC) cluster.
 
 ## Prerequisites
-- Python
-- Jupyter Notebook
-- Conda (for easy BUSCO installation)
-- Assembly and polishing tools installed (listed in requirements.txt file)
+
+This workflow requires a reference genome of a closely related species for scaffolding. Additionally, the project uses a number of software tools and libraries. Before running the assembly workflow, make sure to install all dependencies listed in the `requirements.txt` file. Each tool in the file includes a link to the download page.
 
 ## Download
-1. Download the *Hippodamia convergens* genomic data by emailing Arun Sethuraman: asethuraman@sdsu.edu
-   OR Download your own genomic reads.
-   
-3. Download the assembly_workflow.ipynb
 
-    ```
-    git clone https://github.com/gavrila-ang/MetaGenome.git
-    ```
+To clone the MetaGenome repository, run the following command in your terminal:
 
-4. Navigate to the cloned repository:
+```bash
+https://github.com/gavrila-ang/MetaGenome.git
+```
 
-    ```
-    cd MetaGenome
-    ```
-
-5. Install the necessary tools listed in requirements.txt:
+*(Please replace 'username' with the actual username of the repository owner.)*
 
 ## Usage
 
-1. Launch Jupyter Notebook from the command line:
+The workflow is initiated by capturing user inputs via `user_prompt.sh`, which subsequently generates an executable parameter script. This parameter script along with the `assembly_workflow.sh` are designed to be submitted to an HPC cluster. 
 
-    ```
-    jupyter-notebook
-    ```
+1. Make `user_prompt.sh` and `assembly_workflow.sh` scripts executable. In your terminal, use the following commands:
 
-2. Open `assembly_workflow.ipynb` from the Jupyter notebook interface in your browser.
+```bash
+chmod +x user_prompt.sh
+chmod +x assembly_workflow.sh
+```
 
-3. Execute the commands in each cell of the Jupyter notebook from your command line interface to follow the genome assembly process.
-   Remember to replace the placeholder data, if you are assembling your own genome.
+2. Configure the workflow parameters through user prompts:
+
+```bash
+./user_prompt.sh
+```
+This will generate a parameters script based on your input.
+
+3. Run the assembly workflow, either locally (given sufficient resources) or on an HPC cluster:
+
+```bash
+./assembly_workflow.sh
+```
 
 ## File Structure
 
-- `assembly_workflow.ipynb` - Jupyter Notebook with step-by-step instructions for genome assembly.
+The project contains the following key files:
 
-- `/busco_results/` - Directory containing BUSCO results for each step of the *Hippodamia convergens* assembly process.
+- `assembly_workflow.sh`: This script automates the assembly of metagenomic data into an unphased haploid genome.
+- `user_prompt.sh`: This script obtains the necessary parameters for the `assembly_workflow.sh` through user input and generates an executable parameters script.
+- `requirements.txt`: This file lists the necessary tools and the websites where they can be downloaded.
 
-- `/quast_results/` - Directory containing QUAST results for each step of the *Hippodamia convergens* assembly process.
+## Results Interpretation (QUAST and BUSCO)
 
-## Results Interpretation
+Results of the assembly process can be interpreted using the 3C criterion:
 
-### BUSCO
-BUSCO results provide information about the completeness and correctness of the genome assembly by comparing it with a set of universally single-copy orthologs.
+1. **Contiguity** - QUAST generates the N50 metric, which measures the length such that 50% of the total sequence length is contained in contigs or scaffolds of this length or longer. Higher N50 values generally indicate better contiguity. A contig N50 value of 1Mb is ideal for third generation sequencing. 
 
-### QUAST
-QUAST results provide several metrics including N50, L50, total length, etc. for evaluating the contiguity of the assembly.
+2. **Completeness** - BUSCO assesses the completeness of the assembly by comparing it to a set of universal single-copy orthologs. A high percentage (ideally > 95%) of these "Benchmarking Universal Single-Copy Orthologs" in the assembly indicates high completeness. 
+
+3. **Correctness** - BUSCO duplication measures the number of times universal single-copy orthologs appear more than once in the assembly. A low percentage of duplications (ideally < 5%) generally indicates a more correct assembly.
+
+For a detailed interpretation guide, please refer to the official documentation of these tools.
 
 ## Authors
 
-* Gavrila Ang - https://github.com/gavrila-ang
-* Arun Sethuraman - https://github.com/arunsethuraman
+The MetaGenome repository is maintained by the following authors:
+
+- [Gavrila Ang](https://github.com/gavrila-ang)
+- [Arun Sethuraman](https://github.com/arunsethuraman)
+
+Please feel free to contact for any questions or suggestions.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details
+This project is licensed under the MIT License - see the LICENSE file for details.
+
