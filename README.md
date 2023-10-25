@@ -50,7 +50,7 @@ The project contains the following key files:
 
 ## Overview of `assembly_workflow.sh`
 
-![metagenome_flowchart2](https://github.com/gavrila-ang/MetaGenome/assets/130125777/fb08342d-2efe-432f-a31b-c56f235c1681)
+<img width="246" alt="Screenshot 2023-10-25 at 9 34 47 am" src="https://github.com/gavrila-ang/MetaGenome/assets/130125777/4ac5e8ec-3e34-4079-a5f7-31bf6b3b9b7a">
 
 `assembly_workflow.sh` is the core script that automates the entire genome assembly process. Here's an overview of the key steps involved:
 
