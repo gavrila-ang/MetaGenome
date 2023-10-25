@@ -50,6 +50,8 @@ The project contains the following key files:
 
 ## Overview of `assembly_workflow.sh`
 
+![metagenome_flowchart2](https://github.com/gavrila-ang/MetaGenome/assets/130125777/fb08342d-2efe-432f-a31b-c56f235c1681)
+
 `assembly_workflow.sh` is the core script that automates the entire genome assembly process. Here's an overview of the key steps involved:
 
 1. **Canu**: The initial assembly of metagenomic data takes place in this phase. Canu is a powerful tool specifically designed for long-read sequencing data, in this case, PacBio CLRs (Continuous Long Reads). It corrects and trims the raw reads before actual assembly, thereby improving the quality of the final assembly.
